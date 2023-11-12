@@ -40,47 +40,6 @@ for i in range(10):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 '''def click(button):
     global x
     if (x%2==0):
@@ -99,30 +58,5 @@ def create_button(powx, col, row):
 for i in range(8):
     button = create_button(str(2 ** i), i + 1, 1)
     buttons.append(button)'''
-
-'''pow7 = Button(window, text="128", bg='yellow', fg='red', padx=10, pady=5, command= lambda: click(pow7))
-pow7.grid(row=1, column=1)
-
-pow6 = Button(window, text="64", bg='#ff0000', padx=10, pady=5)
-pow6.grid(row=1, column=2)
-
-pow5 = Button(window, text="32", bg='#ff0000', padx=10, pady=5)
-pow5.grid(row=1, column=3)
-
-pow4 = Button(window, text="16", bg='#ff0000', padx=10, pady=5)
-pow4.grid(row=1, column=4)
-
-pow3 = Button(window, text="8", bg='#ff0000', padx=10, pady=5)
-pow3.grid(row=1, column=5)
-
-pow2 = Button(window, text="4", bg='#ff0000', padx=10, pady=5)
-pow2.grid(row=1, column=6)
-
-pow1 = Button(window, text="2", bg='#ff0000', padx=10, pady=5)
-pow1.grid(row=1, column=7)
-
-pow0 = Button(window, text="1", bg='#ff0000', padx=10, pady=5)
-pow0.grid(row=1, column=8)'''
-
 
 window.mainloop() #displays the window
