@@ -12,14 +12,23 @@ main_label = Label(window, text="number",
                    bg='#A9A9A9',
                    padx=20,
                    pady=10) #set master to window
-main_label.place(x=325, y=70) #add label to window
+main_label.place(x=285, y=125) #add label to window
 
 display_label = Label(window, text="hehe",
                       font=('Arial', 28),
                       bg = '#7F89C1',
                       padx=20,
                       pady=10)
-display_label.place(x=635, y=300)
+display_label.place(x=650, y=300)
+
+submit_button = Button(window, text="submit",
+                     font=('Arial', 16),
+                     bg = '#01814D',
+                     fg = 'white',
+                     activebackground='#02AB72',
+                     padx=10,
+                     pady=5)
+submit_button.place(x=350, y=400)
 
 
 
@@ -27,8 +36,8 @@ class CreateButton:
 
     def __init__(self, window, powx, ro, col):
         self.count = 0
-        self.button = Button(window, text=powx, bg='red', fg='white', padx=10, pady=5, command=self.click)
-        self.button.place(x=col * 80, y=ro * 45)
+        self.button = Button(window, text=powx, bg='red', fg='white', activebackground="orange", padx=10, pady=5, command=self.click)
+        self.button.place(x=20 + col*80, y=ro * 45)
 
     def click(self):
         if self.count%2==0:
