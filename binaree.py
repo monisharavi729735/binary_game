@@ -1,6 +1,5 @@
 from tkinter import *
 import random
-from PIL import *
 
 click = 0
 sum = 0
@@ -12,16 +11,23 @@ def random_number():
     global click
     click += 1
 
-    if click > 0:
-        submit_button.config(text="Submit")
+    if click in range(0,3):
+        number = random.randint(0, 10)
+
+    elif click in range(3,10):
+        number = random.randint(0, 100)
+
+    elif click > 9:
         number = random.randint(0, 256)
-        equality()
-        window.after(1000, lambda: main_label.config(text=number))
+    
+    submit_button.config(text="Submit")
+    equality()
+    window.after(1000, lambda: main_label.config(text=number))
 
-        for one_button in all_buttons:
-            one_button.reset_to_red()
+    for one_button in all_buttons:
+        one_button.reset_to_red()
 
-        return number
+    return number
 
 def equality():
 
@@ -79,9 +85,11 @@ window.minsize(800, 500)
 window.maxsize(800, 500)
 window.title("binary game")
 window.config(background="#212121")
-'''img = PhotoImage(file="bgimg.png")
+
+
+img = PhotoImage(file="gamebg.png")
 bg = Label(window, image=img)
-bg.pack()'''
+bg.pack()
 
 
 main_label = Label(window, text="click start",
@@ -102,7 +110,8 @@ window.after(100, summation)
 
 score_label = Label(window, text="Score: 0",
                     font=('Arial', 16),
-                    bg="#889986",
+                    bg="#008080",
+                    fg="white",
                     padx=20,
                     pady=10)
 score_label.place(x=30, y=25)
