@@ -1,8 +1,11 @@
 from tkinter import *
 import random
+from PIL import *
 
 click = 0
 sum = 0
+score = 0
+
 
 def random_number():
     global number
@@ -11,38 +14,55 @@ def random_number():
 
     if click > 0:
         submit_button.config(text="Submit")
-        number = random.randint(1, 255)
-        main_label.config(text=number)
-        
+        number = random.randint(0, 256)
+        equality()
+        window.after(1000, lambda: main_label.config(text=number))
+
         for one_button in all_buttons:
             one_button.reset_to_red()
 
         return number
 
-def equality(number):
-    try:
-        global total_sum
+def equality():
 
-        if total_sum == number:
+    global score
+    
+    try:
+        display_number = int(main_label.cget("text"))
+
+        #image1 = PhotoImage(file="right.png")
+
+        #image2 = PhotoImage(file="wrong.png")
+
+        if total_sum == display_number:
             main_label.config(bg='green')
-            window.after(3000, lambda: main_label.config(bg='#6A85A9'))
+            window.after(1000, lambda: main_label.config(bg='#6A85A9'))
+            score+=1
+
         else:
             main_label.config(bg='red')
-            window.after(3000, lambda: main_label.config(bg='#6A85A9'))
+            window.after(1000, lambda: main_label.config(bg='#6A85A9'))
+            reset_fn()
+            score = 0
+
+        score_label.configure(text=f"Score: {score}")
     
-    except:
-        isinstance(number,str)
+    except ValueError:
+        pass
 
 
 
 def reset_fn():
     global click
     click = 0
+    score = 0
     main_label.config(text="click start")
     submit_button.config(text="Start")
+    score_label.config(text="Score: 0")
 
     for one_button in all_buttons:
         one_button.reset_to_red()
+
 
 def summation(): #amazinggggg function
     global total_sum
