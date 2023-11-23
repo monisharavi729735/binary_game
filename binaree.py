@@ -42,12 +42,12 @@ def equality():
 
         if total_sum == display_number:
             main_label.config(bg='green')
-            window.after(1000, lambda: main_label.config(bg='#6A85A9'))
+            window.after(1000, lambda: main_label.config(bg='#9500FF'))
             score+=1
 
         else:
             main_label.config(bg='red')
-            window.after(1000, lambda: main_label.config(bg='#6A85A9'))
+            window.after(1000, lambda: main_label.config(bg='#9500FF'))
             reset_fn()
             score = 0
 
@@ -94,14 +94,14 @@ bg.pack()
 
 main_label = Label(window, text="click start",
                    font=('Arial', 40),
-                   bg='#6A85A9',
+                   bg='#9500FF',
                    padx=20,
                    pady=10) #set master to window
 main_label.place(relx=0.5, rely=0.4, anchor=CENTER) #add label to window
 
 display_label = Label(window, text="",
                       font=('Arial', 28),
-                      bg = '#7F89C1',
+                      bg = '#9a4eae',
                       padx=20,
                       pady=10)
 display_label.place(relx=0.89, rely=0.66, anchor=CENTER)
@@ -143,7 +143,7 @@ class CreateButton:
     def __init__(self, window, powx, ro, col):
         self.count = 0
         self.powx = powx
-        self.button = Button(window, text=powx, bg='red', fg='white', activebackground="orange", padx=10, pady=5, command=self.click)
+        self.button = Button(window, text=powx, bg='red', fg='white', activebackground="#ff6700", padx=10, pady=5, command=self.click)
         self.button.place(x=25 + col*80, y=ro * 45)
 
     def click(self):
