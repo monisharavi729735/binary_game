@@ -4,6 +4,20 @@
 
 The Binary Game is a fun and educational game designed to help players understand binary numbers and improve their mental arithmetic skills. The game generates random numbers and challenges the player to match these numbers using binary buttons. The game interface is built using Tkinter in Python.
 
+## Demo
+
+Here are some screenshots of the game in action:
+
+### Main Screen
+
+![Main Screen](images/demo1.png)
+
+### Gameplay
+
+![Gameplay](images/demo2.png)
+![Gameplay](images/demo3.png)
+![Gameplay](images/demo4.png)
+
 ## Features
 
 - **Random Number Generation**: Generates random numbers based on the number of clicks.
