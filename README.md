@@ -40,9 +40,9 @@ Here are some screenshots of the game in action:
 
 ## Usage
 
-1. Run the `binary_game.py` script to start the game.
+1. Run the `binaree.py` script to start the game.
    ```bash
-   python binary_game.py
+   python binaree.py
    ```
 2. Click the "Start" button to generate a random number.
 3. Use the binary buttons to match the displayed number.
